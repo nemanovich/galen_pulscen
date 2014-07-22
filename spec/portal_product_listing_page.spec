@@ -1,9 +1,6 @@
-=======================================
-header                   css      header
-header-logo              css      .portal-logo
-search-block             css      .search-block
-choose-region-link       css      .choose-region-link
+@@ import header.spec
 
+=======================================
 left-column              css      .col-left
 right-column             css      .col-right
 middle-column            css      .col-middle
@@ -18,20 +15,6 @@ vertical-showcase-*      css      #vertical-showcases div.sc
 b2b-context              id       b2bcontext-goods-async
 yandex-ad                xpath    //*[@id = 'yandex_ad_async']/preceding-sibling::*
 =======================================
-
-@ Header | all
---------------------------------------
-search-block:
-    near: header-logo 30px right
-choose-region-link:
-    near: search-block 30px right
-
-@ Header | desktop-M
-------------------------
-header
-    inside: viewport 0 px left
-header-logo  
-    inside: header 3 px left
 
 @ Content | all
 --------------------------------------

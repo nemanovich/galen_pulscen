@@ -1,4 +1,4 @@
-load("..\\pages\\PortalCatalogPage.js");
+load("../pages/PortalCatalogPage.js");
 
 devices = {
     mobile: {
@@ -31,7 +31,7 @@ forAll(devices, function (device) {
         page.open("http://www.test-pulscen.ru/price/010101-truba-besshovnaja");
         page.waitForIt();
 
-        checkLayout(driver, "spec/adaptive_portal_listing_page.spec", ["all", device.deviceName]);
+        checkLayout(driver, "spec/portal_product_listing_page.spec", ["all", device.deviceName]);
         driver.quit();
     });
 });
