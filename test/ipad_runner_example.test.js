@@ -15,5 +15,5 @@ test("Home page test on mobile device", function () {
     page.open("http://www.test-pulscen.ru/price/010101-truba-besshovnaja");
     page.waitForIt();
 
-    checkLayout(driver, "spec/portal_product_listing_page.spec", ["all"]);
+    checkLayout(driver, "spec/listing_page.spec", ["all"]);
 });

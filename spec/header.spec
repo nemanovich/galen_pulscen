@@ -10,13 +10,19 @@ choose-region-link       css      .choose-region-link
 @ Header | all
 --------------------------------------
 search-block:
-    near: header-logo 30px right
-choose-region-link:
-    near: search-block 30px right
+    near: header-logo ~33px right
 
-@ Header | desktop-M
+@ ^ | desktop-XL, desktop-L
+--------------------------------------
+choose-region-link:
+    near: search-block ~33px right
+
+@ ^ | desktop-M, tablet
 ------------------------
 header
     inside: viewport 0 px left
 header-logo  
     inside: header 3 px left
+choose-region-link:
+    absent
+
