@@ -1,7 +1,7 @@
 # Портальный хидер (поисковая строка)
 
 =======================================
-header                   css      header
+header                   css      .js-phw-wrapper
 header-logo              css      .portal-logo
 search-block             css      .search-block
 choose-region-link       css      .choose-region-link
@@ -10,7 +10,7 @@ choose-region-link       css      .choose-region-link
 @ Header | all
 --------------------------------------
 search-block:
-    near: header-logo ~33px right
+    near: header-logo ~60px right
 
 @ ^ | desktop-XL, desktop-L
 --------------------------------------
@@ -20,7 +20,7 @@ choose-region-link:
 @ ^ | desktop-M, tablet
 ------------------------
 header
-    inside: viewport 0 px left
+    inside: screen 0 px left
 header-logo  
     inside: header 3 px left
 choose-region-link:

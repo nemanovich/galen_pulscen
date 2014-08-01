@@ -66,6 +66,5 @@ blocks-devider-3
     below: snippet ~20 px
     aligned vertically all: product-rubrics
 
-b2b-context
-    below: blocks-devider-3 20 to 36 px
-    aligned vertically all: product-rubrics
+region_firms_link
+    below: blocks-devider-3 ~20 px

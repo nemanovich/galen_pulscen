@@ -6,6 +6,7 @@ product-rubrics          css      .js-product-rubrics-list
 facet-block              css      .facet-block
 snippet                  css      p.snippet
 viewed-rubrics           css      .js-viewed-rubrics
+region_firms_link        css      .link-to-firms-from-predl
 
 left-column              css      .col-left
 right-column             css      .col-right
@@ -18,6 +19,7 @@ add-product              css      a.js-add-product
 right-adfox-banner       css      .adfox-banner-350 div#AF_kph2
 vertical-showcases       id       vertical-showcases
 vertical-showcase-*      css      #vertical-showcases div.sc
+blocks-devider-*         css      hr.blocks-devider
 b2b-context              id       b2bcontext-goods-async
 yandex-direct            xpath    //*[@id = 'yandex_ad_async']/preceding-sibling::*
 
@@ -25,7 +27,7 @@ yandex-direct            xpath    //*[@id = 'yandex_ad_async']/preceding-sibling
 communicate-block        css      .communicate-block
 =======================================
 
-@ Product portal listing | all
+@ Product portal listing with vertical showcases | all
 -------------------------------------
 add-product
     width: 220px
@@ -43,7 +45,7 @@ right-adfox-banner
 product-1
     component: spec/portal/catalog/product/list/product_card.spec
 
-@ Product portal listing with vertical showcases | desktop-XL
+@ ^ | desktop-XL
 -------------------------------------
 add-product
     near: products-list ~42 px right
@@ -68,10 +70,15 @@ yandex-direct
     below: vertical-showcases ~20 px
     aligned vertically all: vertical-showcases
 
-@ ^ | desktop-L, tablet, mobile
+b2b-context
+    below: region_firms_link ~20 px
+    aligned vertically all: product-rubrics
+
+
+@ ^ | desktop-L, desktop-M, tablet, mobile
 -------------------------------------
 add-product
-    below: b2b-context ~15 px
+    below: region_firms_link ~20 px
     near: products-list ~42 px left
 vertical-showcases
     aligned vertically all: add-product
@@ -89,6 +96,9 @@ vertical-showcases
 vertical-showcases
     below: add-product 10 to 20 px
 @@ end
+
+b2b-context
+    below: vertical-showcases ~20 px
 
 yandex-direct
     below: communicate-block ~20 px
