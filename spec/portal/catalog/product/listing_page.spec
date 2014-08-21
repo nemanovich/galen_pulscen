@@ -74,7 +74,6 @@ b2b-context
     below: region_firms_link ~20 px
     aligned vertically all: product-rubrics
 
-
 @ ^ | desktop-L, desktop-M, tablet, mobile
 -------------------------------------
 add-product

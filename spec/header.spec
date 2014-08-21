@@ -10,7 +10,7 @@ choose-region-link       css      .choose-region-link
 @ Header | all
 --------------------------------------
 search-block:
-    near: header-logo ~60px right
+    near: header-logo ~33px right
 
 @ ^ | desktop-XL, desktop-L
 --------------------------------------

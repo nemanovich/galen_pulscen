@@ -19,7 +19,7 @@ viewed-rubrics           css      .js-viewed-rubrics
 b2b-context              id       b2bcontext-goods-async
 =======================================
 
-@ Traits column | all
+@ Traits(left) column | all
 --------------------------------------
 column-header
     aligned vertically left: header-logo

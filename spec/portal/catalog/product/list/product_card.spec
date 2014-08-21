@@ -1,6 +1,8 @@
 # Карточка товара в портальном поисковом листинге типа "список"
 
 =======================================
+add-to-bookmarks         css      .add-to-bookmarks
+
 product-item             css      .js-product
 content-body             css      .pi-body
 image                    css      .img-block
@@ -15,12 +17,11 @@ create_order             css      .js-bpal-link-write-message
 expand-company-info      css      .pi-button
 
 company-info             css      .company-info
-company_name             css      li.company
-rank-row                 css      li.rank-row
-company_region           css      li.region
+company-name             css      li.company
+rank-row                 css      .rank-row
+company-region           css      li.region
 phone                    css      .js-show-phone-number
-add-to-bookmarks         css      .add-to-bookmarks
-more_products            css      .js-bp-more-link
+more-products            css      .js-bp-more-link
 =======================================
 
 @ Content | all
@@ -51,10 +52,25 @@ create_order
     below: content ~12 px
     aligned vertically left: title
 
+# Описание колонки поставщика
 @ Company info | desktop-XL, desktop-L
 -------------------------------------
 company-info
     near: title ~20 px right
+company-name
+    aligned horizontally top: title
+rank-row
+    below: company-name ~11 px
+    aligned vertically left: company-name
+company-region
+    below: rank-row ~11 px
+    aligned vertically left: company-name
+phone
+    below: company-region ~11 px
+    aligned vertically left: company-name
+more-products
+    below: phone ~11 px
+    aligned vertically left: company-name
 
 @ ^ | desktop-M, tablet, mobile, company-info-collapsed
 -------------------------------------
@@ -66,7 +82,18 @@ company-info
 @ Company info expanded | desktop-M, tablet, mobile, company-info-expanded
 -------------------------------------
 company-info
-    visible
     below: title
-company_name
-    visible
+company-name
+    aligned vertically left: title
+rank-row
+    below: company-name ~11 px
+    aligned vertically left: company-name
+company-region
+    below: rank-row ~11 px
+    aligned vertically left: company-name
+phone
+    below: company-region ~11 px
+    aligned vertically left: company-name
+more-products
+    below: phone ~11 px
+    aligned vertically left: company-name

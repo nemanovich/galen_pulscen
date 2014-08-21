@@ -17,34 +17,7 @@ devices = {
         deviceName: "desktop-XL",
         size: "1366x768"
     }
-    //  mobile: {
-    //     deviceName: "mobile",
-    //     size: "400x700"
-    // },
 };
-
-forAll(devices, function (device) {
-    test("Chelyabinsk product listing page on " + device.deviceName + " screen", function () {
-        var driver = createDriver("http://test-pulscen.ru", device.size);
-
-        var page = new PortalCatalogPage(driver);
-        page.open("http://www.chel.test-pulscen.ru/price/010101-truba-besshovnaja");
-        page.waitForIt();
-
-        checkLayout(driver,
-            "spec/portal/catalog/product/listing_page.spec",
-            ["all", device.deviceName],
-            [ "company-info-expanded"]);
-
-        //С развернутым блоком информации о компании
-        page.expand_company_info(1);
-        checkLayout(driver,
-            "spec/portal/catalog/product/listing_page.spec",
-            ["all", device.deviceName],
-            [ "company-info-collapsed"]);
-        driver.quit();
-    });
-});
 
 forAll(devices, function (device) {
     test("Chelyabinsk product listing page on " + device.deviceName + " screen", function () {
