@@ -20,7 +20,7 @@ choose-region-link:
 @ ^ | desktop-M, tablet
 ------------------------
 header
-    inside: screen 0 px left
+    width: ~100% of screen/width
 header-logo  
     inside: header 3 px left
 choose-region-link:

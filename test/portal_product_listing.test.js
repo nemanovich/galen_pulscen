@@ -3,7 +3,7 @@ load("../pages/PortalCatalogPage.js");
 devices = {
     tablet: {
         deviceName: "tablet",
-        size: "800x600"
+        size: "600x800"
     },
     desktop_medium: {
         deviceName: "desktop-M",
@@ -15,7 +15,7 @@ devices = {
     },
     desktop_extra_large: {
         deviceName: "desktop-XL",
-        size: "1366x768"
+        size: "1366x1024"
     }
 };
 

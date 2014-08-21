@@ -22,7 +22,7 @@ b2b-context              id       b2bcontext-goods-async
 @ Traits(left) column | all
 --------------------------------------
 column-header
-    aligned vertically left: header-logo
+    inside: screen 3 px left
 
 product-rubrics
     below: column-header ~25 px
