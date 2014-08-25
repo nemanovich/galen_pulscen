@@ -1,50 +1,49 @@
 load("../pages/PortalCatalogPage.js");
-
-devices = {
-    tablet: {
-        deviceName: "tablet",
-        size: "600x800"
-    },
-    desktop_medium: {
-        deviceName: "desktop-M",
-        size: "1023x768"
-    },
-    desktop_large: {
-        deviceName: "desktop-L",
-        size: "1200x768"
-    },
-    desktop_extra_large: {
-        deviceName: "desktop-XL",
-        size: "1366x1024"
-    }
-};
+load("init.js");
 
 forAll(devices, function (device) {
-    test("Chelyabinsk product listing page on " + device.deviceName + " screen", function () {
-        var driver = createDriver("http://test-pulscen.ru", device.size);
-
+    test("Chelyabinsk product listing page 'with images' type on " + device.deviceName + " screen", function () {
+        var driver = createDriver("http://" + domain, device.size);
         var page = new PortalCatalogPage(driver);
-        page.open("http://www.chel.test-pulscen.ru/price/010101-truba-besshovnaja");
+        page.open("http://www.chel." + domain + "/price/010101-truba-besshovnaja?listing_style=list");
         page.waitForIt();
 
         checkLayout(driver,
             "spec/portal/catalog/product/listing_page.spec",
             ["all", device.deviceName],
-            [ "company-info-expanded"]);
+            ["company-info-expanded", "without-images"]);
 
-        //С развернутым блоком информации о компании
+        //С развернутым блоком информации о компании в первом товаре
         page.expand_company_info(1);
         checkLayout(driver,
             "spec/portal/catalog/product/listing_page.spec",
             ["all", device.deviceName],
-            [ "company-info-collapsed"]);
+            ["company-info-collapsed", "without-images"]);
+        driver.quit();
+    });
+
+    test("Chelyabinsk product listing page 'without images' type on " + device.deviceName + " screen", function () {
+        var driver = createDriver("http://" + domain, device.size);
+        var page = new PortalCatalogPage(driver);
+        page.open("http://www.chel." + domain + "/price/010101-truba-besshovnaja?listing_style=without_images");
+        page.waitForIt();
+
+        logged("without images listing with collapsed company info", function () {
+            checkLayout(driver,
+            "spec/portal/catalog/product/listing_page.spec",
+            ["all", device.deviceName],
+            ["company-info-expanded", "list"]);
+        });
+
+        //С развернутым блоком информации о компании в первом товаре
+        page.expand_company_info(1);
+        logged("without images listing with expanded company info", function () {
+            checkLayout(driver,
+            "spec/portal/catalog/product/listing_page.spec",
+            ["all", device.deviceName],
+            ["company-info-collapsed", "list"]);
+        });
         driver.quit();
     });
 });
 
-afterTest(function (test) {
-    var driver = session.get("driver");
-    if (driver != null) {
-        driver.quit();
-    }
-});

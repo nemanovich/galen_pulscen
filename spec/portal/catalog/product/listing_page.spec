@@ -14,6 +14,7 @@ middle-column            css      .col-middle-background
 
 products-list            id       products-list
 product-*                css      li.js-product
+horizontal-showcases     css      .js-horizontal-showcases
 
 add-product              css      a.js-add-product
 right-adfox-banner       css      .adfox-banner-350 div#AF_kph2
@@ -44,6 +45,9 @@ right-adfox-banner
 
 product-1
     component: spec/portal/catalog/product/list/product_card.spec
+horizontal-showcases
+    below: product-2 ~0 px
+    aligned vertically all: product-2
 
 @ ^ | desktop-XL
 -------------------------------------
