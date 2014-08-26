@@ -1,11 +1,19 @@
 # Портальный хидер (поисковая строка)
 
 =======================================
+adfox-banner-top         css       .adfox-banner-top
 header                   css      .js-phw-wrapper
 header-logo              css      .portal-logo
 search-block             css      .search-block
 choose-region-link       css      .choose-region-link
 =======================================
+
+@ Adfox top banner | all
+------------------------------------
+adfox-banner-top
+    height: 60px
+    width: 100 % of screen/width
+
 
 @ Header | all
 --------------------------------------

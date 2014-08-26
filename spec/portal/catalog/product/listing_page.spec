@@ -1,7 +1,11 @@
 @@ import ../../../header.spec
+@@ import ../../../breadcrumbs.spec
+@@ import ../../../pagination.spec
 @@ import traits_column.spec
 
 =======================================
+adfox-banner-top         css      .adfox-banner-top
+
 product-rubrics          css      .js-product-rubrics-list
 facet-block              css      .facet-block
 snippet                  css      p.snippet
@@ -12,6 +16,7 @@ left-column              css      .col-left
 right-column             css      .col-right
 middle-column            css      .col-middle-background
 
+breadcrumbs              css      .breadcrumbs-slider-wrapper
 products-list            id       products-list
 product-*                css      li.js-product
 horizontal-showcases     css      .js-horizontal-showcases
@@ -43,6 +48,11 @@ right-adfox-banner
     below: add-product ~21px
 @@ end
 
+breadcrumbs
+    below: adfox-banner-top ~106px
+    above: middle-column ~31px
+    aligned vertically left: middle-column
+    inside: screen ~3px right
 product-1
     component: spec/portal/catalog/product/list/product_card.spec
 horizontal-showcases
