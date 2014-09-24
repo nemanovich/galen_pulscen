@@ -50,7 +50,7 @@ price
     below: title ~10 px
     aligned vertically left: title
 availability
-    below: price 8 px
+    below: price ~8 px
     aligned vertically left: title
 amount
     near: availability ~21 px right

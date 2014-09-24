@@ -53,10 +53,10 @@ breadcrumbs
     above: middle-column ~31px
     aligned vertically left: middle-column
     inside: screen ~3px right
-product-1
+product-4
     component: spec/portal/catalog/product/list/product_card.spec
-product-2
-    below: product-1 ~0 px
+product-5
+    below: product-4 ~0 px
 horizontal-showcases
     below: product-2 ~0 px
     aligned vertically all: product-2

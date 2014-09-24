@@ -13,8 +13,8 @@ forAll(devices, function (device) {
             ["all", device.deviceName],
             ["company-info-expanded", "without-images"]);
 
-        //С развернутым блоком информации о компании в первом товаре
-        page.expand_company_info(1);
+        //С развернутым блоком информации о компании в 4 товаре
+        page.expand_company_info(4);
         checkLayout(driver,
             "spec/portal/catalog/product/listing_page.spec",
             ["all", device.deviceName],
